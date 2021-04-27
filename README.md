@@ -9,7 +9,7 @@ If you don't know what GoBarber is please have a look [here](https://github.com/
 
 The purpose of this project is to provide clients a signup process, sign in, and the ability to schedule an appointment with the desired provider for beauty services.
 
-You may also want to see the [GoBarber API repository](https://github.com/jeffersoncechinel/gobarber-api)
+You may also want to see the [GoBarber API repository](https://github.com/jeffersoncechinel/gobarber-api)  
 You may also want to see the [GoBarber Web repository](https://github.com/jeffersoncechinel/gobarber-web)
 
 ![Data Flow](resources/gobarber-mobile.png?raw=true "Data Flow")
@@ -18,7 +18,7 @@ The application is written in Typescript + React Native + Styled Components.
 
 Features
 ----
-- Animated switch SignUp and SignIn screens.
+- Animated switch SignUp and Sign In screens.
 - Form input validations with visual alerts.
 - Alert messages for success and error operations.
 - List available service providers.
