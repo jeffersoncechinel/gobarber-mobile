@@ -1,20 +1,22 @@
 import React, { useCallback, useRef } from 'react'
 import {
-  Container,
-  BackButton,
-  Title,
-  UserAvatarButton,
-  UserAvatar
-} from './styles'
-import {
+  Button as SignOutButton,
   Alert,
-  Image,
+  // Image,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
   TextInput,
   View
 } from 'react-native'
+import {
+  Container,
+  BackButton,
+  Title,
+  UserAvatarButton,
+  UserAvatar,
+  Header
+} from './styles'
 
 import Input from '../../components/Input'
 import Button from '../../components/Button'
@@ -37,7 +39,7 @@ interface ProfileFormData {
 }
 
 const SignUp: React.FC = () => {
-  const { user, updateUser } = useAuth()
+  const { user, updateUser, signOut } = useAuth()
   const navigation = useNavigation()
 
   const passwordInputRef = useRef<TextInput>(null)
@@ -168,9 +170,13 @@ const SignUp: React.FC = () => {
           contentContainerStyle={{ flex: 1 }}
         >
           <Container>
-            <BackButton onPress={handleGoBack}>
-              <Icon name={'chevron-left'} size={24} color={'#999591'} />
-            </BackButton>
+            <Header>
+              <BackButton onPress={handleGoBack}>
+                <Icon name={'chevron-left'} size={24} color={'#999591'} />
+              </BackButton>
+              <SignOutButton title="SignOut" onPress={signOut} />
+            </Header>
+
             <UserAvatarButton onPress={handleUpdateAvatar}>
               <UserAvatar source={{ uri: user.avatar_url }} />
             </UserAvatarButton>

@@ -3,11 +3,12 @@ import { Container, ButtonText } from './styles'
 import { RectButtonProperties } from 'react-native-gesture-handler'
 
 interface ButtonProps extends RectButtonProperties {
-  children: string
+  children?: string
+  color?: any
 }
 
-const Button: React.FC<ButtonProps> = ({ children, ...rest }) => (
-  <Container {...rest}>
+const Button: React.FC<ButtonProps> = ({ children, color, ...rest }) => (
+  <Container color={color} {...rest}>
     <ButtonText>{children}</ButtonText>
   </Container>
 )

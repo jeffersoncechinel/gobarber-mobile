@@ -1,6 +1,7 @@
 import styled from 'styled-components/native'
-import { getBottomSpace } from 'react-native-iphone-x-helper'
+import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 import { Platform } from 'react-native'
+import { RectButton, TouchableOpacity } from 'react-native-gesture-handler'
 
 export const Container = styled.View`
   flex: 1;
@@ -8,9 +9,7 @@ export const Container = styled.View`
   padding: 0 30px ${Platform.OS === 'android' ? 150 : 40}px;
 `
 
-export const BackButton = styled.TouchableOpacity`
-  margin-top: 40px;
-`
+export const BackButton = styled.TouchableOpacity``
 
 export const Title = styled.Text`
   font-size: 20px;
@@ -27,4 +26,10 @@ export const UserAvatar = styled.Image`
   height: 186px;
   border-radius: 98px;
   align-self: center;
+`
+export const Header = styled.View`
+  margin-top: 40px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `

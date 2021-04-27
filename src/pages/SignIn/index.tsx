@@ -85,7 +85,7 @@ const SignIn: React.FC = () => {
           <Container>
             <Image source={logoImg} />
             <View>
-              <Title>Faça seu logon</Title>
+              <Title>Sign In</Title>
             </View>
             <Form ref={formRef} onSubmit={handleSignIn}>
               <Input
@@ -104,7 +104,7 @@ const SignIn: React.FC = () => {
                 ref={passwordInputRef}
                 name="password"
                 icon="lock"
-                placeholder="Senha"
+                placeholder="Password"
                 secureTextEntry
                 returnKeyType="send"
                 onSubmitEditing={() => {
@@ -117,17 +117,17 @@ const SignIn: React.FC = () => {
                 formRef.current?.submitForm()
               }}
             >
-              Entrar
+              Sign In
             </Button>
             <ForgotPassword>
-              <ForgotPasswordText>Esqueci minha senha</ForgotPasswordText>
+              <ForgotPasswordText>Forgot my password</ForgotPasswordText>
             </ForgotPassword>
           </Container>
         </ScrollView>
 
         <CreateAccountButton onPress={() => navigation.navigate('SignUp')}>
           <Icon name="log-in" size={16} color="#ff9000" />
-          <CreateAccountButtonText>Criar conta</CreateAccountButtonText>
+          <CreateAccountButtonText>Create account</CreateAccountButtonText>
         </CreateAccountButton>
       </KeyboardAvoidingView>
     </>

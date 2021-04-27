@@ -84,8 +84,6 @@ const Dashboard: React.FC = () => {
           </ProviderContainer>
         )}
       />
-
-      <Button title="SignOut" onPress={signOut} />
     </Container>
   )
 }
